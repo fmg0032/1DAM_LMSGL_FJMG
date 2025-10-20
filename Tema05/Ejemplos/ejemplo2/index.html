@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Formulario simple</title>
+</head>
+<body>
+    <form action="proceso.php" method="get">
+        Nombre: <input type="text" name="nombre">
+
+        <p>
+            <input type="radio" name="sexo" value="h">Hombre
+            <input type="radio" name="sexo" value="m">Mujer
+
+        </p>
+            <input type="button" value="Enviar">
+            <input type="submit" value="Borrar">
+            <input type="reset" value="resetear">
+        <hr>
+            <p>Nombre: <input type="text" name="nombre" size="50"> </p>
+            <p>Contraseña: <input type="password" name="password" size="22" maxlength="8" minlength="1"> </p>
+            <p>Comentario: <textarea name="Comentario" rows="4" cols="27"></textarea> </p>
+
+
+
+        <hr>
+        <input type="checkbox" name="opcion1"> opcion1
+        <input type="checkbox" name="opcion2" checked> opcion2
+        <input type="checkbox" name="opcion3"> opcion3
+        <hr>
+        <p>Opciones a elegir</p>
+        <select name="opciones" size="1">
+            <option value="1">Opcion1</option>
+            <option value="2">Opcion2</option>
+            <option value="3">Opcion3</option>
+        </select>
+    </form>
+</body>
+</html>
