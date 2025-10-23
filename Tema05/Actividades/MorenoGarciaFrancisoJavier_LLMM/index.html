@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Estilo para la tabla y sus elementos -->
+    <style>
+    
+    table, tr, td, th {
+        border: 2px solid black;
+        text-align: center;
+        background-color: rgb(59, 104, 241); 
+        color: white; 
+    }
+    </style>
+</head>
+
+<body>
+    <hr>
+
+    <!-- Tabla del horario -->
+    <table>
+        <tr>
+            <!-- Encabezado de los días -->
+            <th style="background-color: blue;">Hora</th>
+            <th style="background-color: blue;">Lunes</th>
+            <th style="background-color: blue;">Martes</th>
+            <th style="background-color: blue;">Miércoles</th>
+            <th style="background-color: blue;">Jueves</th>
+            <th style="background-color: blue;">Viernes</th>
+        </tr>
+
+        <!-- Primeras horas -->
+        <tr> 
+            <th>8.30-9.30</th>
+            <th rowspan="3">Lenguaje</th>
+            <th rowspan="3">Sistemas informáticos</th>
+            <th rowspan="3">Entornos de desarrollo</th>
+            <th rowspan="3">Base de datos</th>
+            <th rowspan="3">Programación</th>
+        </tr>
+        <tr><th>9.30-10.30</th></tr>
+        <tr><th>10.30-11.30</th></tr>
+
+        <!-- Descanso -->
+        <tr>
+            <th>11.30-12</th>
+            <th colspan="5">Descanso</th>
+        </tr>
+
+        <!-- Últimas horas -->
+        <tr>
+            <th>12-13</th>
+            <th rowspan="3">Programación</th>
+            <th rowspan="3">Base de datos</th>
+            <th>Sostenibilidad</th>
+            <th rowspan="2">Programación</th>
+            <th rowspan="3">ITE1</th>
+        </tr>
+        <tr>
+            <th>13.00-14.00</th>
+            <th rowspan="2">Sistemas operativos</th>
+        </tr>
+        <tr>
+            <th>14.00-15.00</th>
+            <th>Digitalización</th>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Formulario -->
+    <h1>Formulario</h1>
+    <form action="proceso.php" method="post">
+
+        <!-- Datos personales -->
+        <fieldset>
+            <legend>Datos personales</legend>
+            Nombre: <input type="text" name="nombre" required><br><br>
+            Apellidos: <input type="text" name="apellido" required><br><br>
+            Edad: <input type="number" name="edad" required><br><br>
+            Género: 
+            <input type="radio" name="sexo" value="Hombre">Hombre
+            <input type="radio" name="sexo" value="Mujer">Mujer<br><br>
+        </fieldset>
+
+        <!-- Datos de contacto -->
+        <fieldset>
+            <legend>Contacto</legend> 
+            Correo electrónico: <input type="email" name="Correo" required><br><br>
+            Código Postal: <input type="number" name="Codigo" required><br><br>
+            Dirección: <input type="text" name="Dirección" required><br><br>
+            
+            <!-- Lista desplegable -->
+            Ciudad:
+            <select name="opciones" size="1">
+                <option value="1">Jaén</option>
+                <option value="2">Málaga</option>
+                <option value="3">Granada</option>
+                <option value="4">Huelva</option>
+                <option value="5">Cádiz</option>
+                <option value="6">Almería</option>
+                <option value="7">Córdoba</option>
+                <option value="8">Sevilla</option>
+            </select> <br><br>
+
+            Contraseña: <input type="password" name="Contraseña" required><br><br>
+        </fieldset>
+
+        <!-- Intereses -->
+        <fieldset>
+            <legend>Datos de Interés</legend>
+            Estado civil:
+            <input type="radio" name="relacion" value="No casado">No casado
+            <input type="radio" name="relacion" value="Casado">Casado<br><br>
+
+            <!-- Hobbies con checkboxes -->
+            Hobbies:<br><br>
+            <input type="checkbox" name="opcion1">Deporte<br><br>
+            <input type="checkbox" name="opcion2">Cine<br><br>
+            <input type="checkbox" name="opcion3">Lectura<br><br>
+            <input type="checkbox" name="opcion4">Correr<br><br>
+        </fieldset>      
+
+        <!-- Comentarios -->
+        <fieldset>
+            <legend>Comentarios Adicionales</legend>
+            Escribe aquí tus comentarios:
+            <p><textarea name="Comentarios" rows="4" cols="27"></textarea></p>
+        </fieldset>
+
+        <!-- Botones -->
+        <input type="button" value="Enviar">
+        <input type="reset" name="Resetear">
+    </form>
+
+</body>
+</html>
