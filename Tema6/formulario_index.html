@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <hr>
+
+    <!-- Formulario -->
+    <h1>Formulario</h1>
+    <form action="proceso.php" method="post">
+
+        <!-- Datos personales -->
+        <fieldset>
+            <legend>Datos personales</legend>
+            Nombre: <input type="text" name="nombre" required><br><br>
+            Apellidos: <input type="text" name="apellido" required><br><br>
+            Edad: <input type="number" name="edad" required><br><br>
+            Género: 
+            <input type="radio" name="sexo" value="Hombre">Hombre
+            <input type="radio" name="sexo" value="Mujer">Mujer<br><br>
+        </fieldset>
+
+        <!-- Datos de contacto -->
+        <fieldset>
+            <legend>Contacto</legend> 
+            Correo electrónico: <input type="email" name="Correo" required><br><br>
+            Código Postal: <input type="number" name="Codigo" required><br><br>
+            Dirección: <input type="text" name="Dirección" required><br><br>
+            
+            <!-- Lista desplegable -->
+            Ciudad:
+            <select name="opciones" size="1">
+                <option value="1">Jaén</option>
+                <option value="2">Málaga</option>
+                <option value="3">Granada</option>
+                <option value="4">Huelva</option>
+                <option value="5">Cádiz</option>
+                <option value="6">Almería</option>
+                <option value="7">Córdoba</option>
+                <option value="8">Sevilla</option>
+            </select> <br><br>
+
+            Contraseña: <input type="password" name="Contraseña" required><br><br>
+        </fieldset>
+
+        <!-- Intereses -->
+        <fieldset>
+            <legend>Datos de Interés</legend>
+            Estado civil:
+            <input type="radio" name="relacion" value="No casado">No casado
+            <input type="radio" name="relacion" value="Casado">Casado<br><br>
+
+            <!-- Hobbies con checkboxes -->
+            Hobbies:<br><br>
+            <input type="checkbox" name="opcion1">Deporte<br><br>
+            <input type="checkbox" name="opcion2">Cine<br><br>
+            <input type="checkbox" name="opcion3">Lectura<br><br>
+            <input type="checkbox" name="opcion4">Correr<br><br>
+        </fieldset>      
+
+        <!-- Comentarios -->
+        <fieldset>
+            <legend>Comentarios Adicionales</legend>
+            Escribe aquí tus comentarios:
+            <p><textarea name="Comentarios" rows="4" cols="27"></textarea></p>
+        </fieldset>
+
+        <!-- Botones -->
+        <input type="button" value="Enviar">
+        <input type="reset" name="Resetear">
+    </form>
+    <a href="index.html">Volver </a>
+</body>
+</html>
