@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes Sol y Mar - Destinos Frecuentes</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        }
+        table {
+            /* Ocupar el 50% del ancho */
+            width: 50%;
+            border: solid 2px black;
+            /* Estar centrada */
+            margin: auto; /* Tabla centrada*/
+            /* Estilos adicionales para que se vea bien */
+            border-collapse: collapse; /* Colapsa los bordes */
+
+        }
+
+        caption {
+            /* Fuente Verdana */
+            font-family: Verdana,;
+            /* Letras más separadas */
+            letter-spacing: 2px; /* 2px más de espacio */
+            font-size: 1.5em; /* Más grande que el texto normal */
+            color: blue;
+        }
+
+        th{
+            /* Fuente Verdana */
+            font-family: Verdana;
+
+            /* Tamaño 1.5 veces el normal (16px * 1.5 = 24px) */
+            font-size: 1em; /* 1.5em = 150% del tamaño base */
+            /* Estilos adicionales de cabecera */
+            background-color: rgb(10, 255, 10); /* Un azul corporativo */
+            color: white;
+            text-align: center; /* Alineación por defecto para cabeceras */
+        }
+        
+        th, td {
+            /* REQUISITO: Espacio entre contenido y borde */
+            padding: 12px 15px; 
+            
+            /* Borde sutil */
+            border-bottom: 1px solid black;
+        }
+
+        /* REQUISITO: Alineación de Precios (columna 3) */
+        td:nth-child(3) {
+            text-align: right;
+            font-weight: bold; /* Hacemos que el precio destaque */
+        }
+
+        /* REQUISITO: Filas impares (1, 3, 5...) */
+        tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        /* REQUISITO: Filas pares (2, 4, 6...) */
+        tr:nth-child(even) {
+            background-color: grey;
+        }
+
+        /* REQUISITO: Cambio de color al pasar el cursor */
+        tr:hover {
+            background-color: rgb(157, 214, 240); /* Un azul claro al pasar */
+            cursor: pointer; /* Cambia el cursor a una mano */
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption><b>Destinos Más Frecuentes</b></caption>
+
+            <tr>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th>Precio (Desde)</th>
+            </tr>
+
+            <tr>
+                <td>Madrid</td>
+                <td>Roma</td>
+                <td>280€</td>
+            </tr>
+            <tr>
+                <td>Barcelona</td>
+                <td>París</td>
+                <td>310€</td>
+            </tr>
+            <tr>
+                <td>Málaga</td>
+                <td>Londres</td>
+                <td>250€</td>
+            </tr>
+            <tr>
+                <td>Sevilla</td>
+                <td>Lisboa</td>
+                <td>160€</td>
+            </tr>
+            <tr>
+                <td>Valencia</td>
+                <td>Berlín</td>
+                <td>340€</td>
+            </tr>
+
+    </table>
+
+</body>
+</html>
