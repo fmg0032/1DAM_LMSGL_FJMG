@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudoclases y Pseudoelementos</title>
+    <style>
+        /*Primer hijo*/
+        ul li:first-child {color: red;}
+        /*Ultimo hijo*/
+        ul li:last-child{color:green;}
+        /*Posicion en concto ponerle color*/
+        ul li:nth-child(2) {color: blue;}
+        ul li:nth-child(3) {color: orange;}
+        a:link {color: blue;}
+        a:visited {color: red;}
+        a:hover {background-color: yellow; } 
+        li::first-letter{text-transform:UPPERCASE;}
+        p::after {content:" -Esto es un párrafo";}
+    </style>
+</head>
+<body>
+    <p>PAISES</p>
+    <ul>
+        <li>españa</li>
+        <li>bélgica</li>
+        <li>francia</li>
+        <li>portugal</li>
+    </ul>
+    <p>MENU</p>
+    <a href="#el">Inicio</a>
+    <a href="#e2">Servicios</a>
+    <a href="#e3">Contacto</a>
+</body>
+</html>
