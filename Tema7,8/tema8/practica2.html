@@ -9,29 +9,28 @@
         box-sizing: border-box;
         }
         table {
-            /* Ocupar el 50% del ancho */
+            /* Ocupar el 50% del ancho de la pagina */
             width: 50%;
-            border: solid 2px black;
-            /* Estar centrada */
-            margin: auto; /* Tabla centrada*/
+            border: solid 3px black;
+            /* Estar centrada en la pagina */
+            margin-left: 25%; /* Tabla centrada*/
             /* Estilos adicionales para que se vea bien */
             border-collapse: collapse; /* Colapsa los bordes */
 
         }
-
-        caption {
+        /*Titulo pegado a la tabla*/
+        #titulo {
+            text-align: center;
             /* Fuente Verdana */
             font-family: Verdana,;
             /* Letras más separadas */
-            letter-spacing: 2px; /* 2px más de espacio */
-            font-size: 1.5em; /* Más grande que el texto normal */
-            color: blue;
+            letter-spacing: 3px; /* 3px más de espacio */
+            color: blue;/*Color de la letra*/
         }
 
         th{
             /* Fuente Verdana */
             font-family: Verdana;
-
             /* Tamaño 1.5 veces el normal (16px * 1.5 = 24px) */
             font-size: 1em; /* 1.5em = 150% del tamaño base */
             /* Estilos adicionales de cabecera */
@@ -41,27 +40,24 @@
         }
         
         th, td {
-            /* REQUISITO: Espacio entre contenido y borde */
+            /* REQUISITO: Espacio entre contenido de arriba y borde abjajo*/
             padding: 12px 15px; 
-            
-            /* Borde sutil */
+            /* Borde pequeño */
             border-bottom: 1px solid black;
         }
 
-        /* REQUISITO: Alineación de Precios (columna 3) */
+        /* REQUISITO: Alineación de Precios (columna 3) al poner td:nth-child(3) elegimos la tercera columna*/
         td:nth-child(3) {
             text-align: right;
             font-weight: bold; /* Hacemos que el precio destaque */
         }
 
-        /* REQUISITO: Filas impares (1, 3, 5...) */
-        tr:nth-child(odd) {
-            background-color: white;
-        }
 
-        /* REQUISITO: Filas pares (2, 4, 6...) */
+        /* REQUISITO: Filas pares (2, 4, 6...) y odd es impar*/
         tr:nth-child(even) {
             background-color: grey;
+            text-align: left;
+
         }
 
         /* REQUISITO: Cambio de color al pasar el cursor */
@@ -74,7 +70,7 @@
 <body>
 
     <table>
-        <caption><b>Destinos Más Frecuentes</b></caption>
+        <h1 id="titulo"><b>Destinos Más Frecuentes</b></h1>
 
             <tr>
                 <th>Origen</th>
